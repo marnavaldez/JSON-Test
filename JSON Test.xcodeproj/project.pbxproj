@@ -12,6 +12,7 @@
 		4857185D1DDECC9A003A8690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4857185B1DDECC9A003A8690 /* Main.storyboard */; };
 		4857185F1DDECC9A003A8690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4857185E1DDECC9A003A8690 /* Assets.xcassets */; };
 		485718621DDECC9A003A8690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485718601DDECC9A003A8690 /* LaunchScreen.storyboard */; };
+		DE8BC65A22F5E16A8AD3DCDE /* Pods_JSON_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F933F0F7BF83CF92718884 /* Pods_JSON_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4857185E1DDECC9A003A8690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		485718611DDECC9A003A8690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485718631DDECC9A003A8690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9F933F0F7BF83CF92718884 /* Pods_JSON_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSON_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92032CEC22E577EC04E008F /* Pods-JSON Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSON Test/Pods-JSON Test.release.xcconfig"; sourceTree = "<group>"; };
+		F12EAABD577C5601308B0830 /* Pods-JSON Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSON Test/Pods-JSON Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8BC65A22F5E16A8AD3DCDE /* Pods_JSON_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				485718561DDECC9A003A8690 /* JSON Test */,
 				485718551DDECC9A003A8690 /* Products */,
+				8147CF0EFBCE9AF9E1306C1A /* Pods */,
+				7C0F58623C3968DB80F4C2DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "JSON Test";
 			sourceTree = "<group>";
 		};
+		7C0F58623C3968DB80F4C2DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F933F0F7BF83CF92718884 /* Pods_JSON_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8147CF0EFBCE9AF9E1306C1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F12EAABD577C5601308B0830 /* Pods-JSON Test.debug.xcconfig */,
+				D92032CEC22E577EC04E008F /* Pods-JSON Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 485718661DDECC9A003A8690 /* Build configuration list for PBXNativeTarget "JSON Test" */;
 			buildPhases = (
+				B6BEC2033498900E500888CF /* [CP] Check Pods Manifest.lock */,
 				485718501DDECC9A003A8690 /* Sources */,
 				485718511DDECC9A003A8690 /* Frameworks */,
 				485718521DDECC9A003A8690 /* Resources */,
+				EFA32E644E312D6466260080 /* [CP] Embed Pods Frameworks */,
+				1ED773E9AF970FD2F8B6CC0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ED773E9AF970FD2F8B6CC0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSON Test/Pods-JSON Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BEC2033498900E500888CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA32E644E312D6466260080 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSON Test/Pods-JSON Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		485718501DDECC9A003A8690 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		485718671DDECC9A003A8690 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12EAABD577C5601308B0830 /* Pods-JSON Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D258639E2H;
@@ -272,6 +348,7 @@
 		};
 		485718681DDECC9A003A8690 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D92032CEC22E577EC04E008F /* Pods-JSON Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D258639E2H;

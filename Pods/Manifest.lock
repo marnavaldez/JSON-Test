@@ -1,0 +1,12 @@
+PODS:
+  - AlamofireDomain (4.1)
+
+DEPENDENCIES:
+  - AlamofireDomain (~> 4.1)
+
+SPEC CHECKSUMS:
+  AlamofireDomain: 6a17c975e5fe8c10d8dbfdb1ab28e6dd0ae7cd41
+
+PODFILE CHECKSUM: d4f04a60666563e8a64930496e7c8b85247f3388
+
+COCOAPODS: 1.1.1
