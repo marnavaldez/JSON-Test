@@ -17,40 +17,55 @@ class ViewController: UIViewController {
         let myURL = "https://randomuser.me/api/"
         
         AlamofireDomain.request(myURL).responseJSON { response in
-            
-            print(response)
+            //            print(response)
             
             //Getting data and creating the object Persona
             let result = response.result
-            
-            var persona = self.getPersona(username: "marnavaldez")
+            let persona = Persona()
             
             if let object = result.value as? Dictionary<String, AnyObject> {
                 if let results = object["results"]![0] as? Dictionary<String, AnyObject> {
-                    if let webGender = results["gender"] as? String {
-                        
-                        persona.gender = webGender
-                        print("....\(webGender).....")
+                    // Gender
+                    persona.gender = (results["gender"]! as? String)!
+                    
+                    // First Name
+                    if let name = results["name"]! as? Dictionary<String, AnyObject> {
+//                        persona.first = (name["first"]! as? String)!
+                        if let webFirst = name["first"]! as? String {
+                          persona.first = webFirst.capitalized
+                        }
                     }
-                        
                     
+                    // Location City
+                    if let location = results["location"]! as? Dictionary<String,AnyObject> {
+                        persona.city = (location["city"]! as? String)!.capitalized
+                    }
                     
-                }
+                    // Email
+                    persona.email = (results["email"]! as? String)!
+                    
+                    // Phone
+                    persona.phone = (results["phone"]! as? String)!
+                    
+                    // Username
+                    if let login = results["login"]! as? Dictionary<String, AnyObject> {
+                        persona.username = (login["username"]! as? String)!
+                    }
+                    
+                }//if results
                 
-            }
-            
-            var threeDoubles = Array(repeating: 2, count: 3)
-            
-            print("\(threeDoubles)")
-            
-            print(persona.description)
-            
-        }
+            }//if object
+        
+            print("\(persona.description)")
+        
+        }//AlamofireDomain
         
     }
     
-    func getPersona(username:String) -> Persona {
-        let persona = Persona(username: username,gender: "H",first: "Alberto", city: "Zacatecas", email: "marnavaldez@gmail.com",phone: 4921077652);
+    func getPersonaFromJSON(username:String) -> Persona {
+        
+        let persona = Persona(username: username,gender: "H",first: "Alberto", city: "Zacatecas", email: "marnavaldez@gmail.com",phone: "(492) 107 7652")
+
         
         return persona
     }

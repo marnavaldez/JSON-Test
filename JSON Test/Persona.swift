@@ -14,9 +14,18 @@ class Persona {
     var first: String
     var city: String
     var email: String
-    var phone: Int
+    var phone: String
     
-    init(username:String, gender:String, first:String, city:String, email:String, phone:Int) {
+    init(){
+        self.username = ""
+        self.gender = ""
+        self.first = ""
+        self.city = ""
+        self.email = ""
+        self.phone = ""
+    }
+    
+    init(username:String, gender:String, first:String, city:String, email:String, phone:String) {
         self.username = username
         self.gender = gender
         self.first = first
